@@ -39,10 +39,10 @@ def AddText(image):
 maxnum = int(input("How Many?: "))
 
 for i in range(maxnum):
-    randomfile = random.choice(os.listdir("C:\\Users\\Home\\Desktop\\fried\\imagelibrary"))
+    randomfile = random.choice(os.listdir("imageLibrary"))
     randomimg = randomfile
     num +=1
-    AddText(DeepFry(Image.open(os.path.join("C:\\Users\\Home\\Desktop\\fried\\imagelibrary" , randomimg)))).save("finalimage"+str(num)+".png")
+    AddText(DeepFry(Image.open(os.path.join("imageLibrary" , randomimg)))).save("finalimage"+str(num)+".png")
 
 numfile.seek(0)
 numfile.write(str(num))
