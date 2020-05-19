@@ -12,6 +12,7 @@ def DeepFry(image):
     image = sharp.enhance(5.0)
     colour = ImageEnhance.Color (image)
     image = colour.enhance(5.0)
+    
     return image
 
 def AddText(image):
@@ -33,9 +34,12 @@ def AddText(image):
     tw = font.getsize(rndword)[0]
     th = font.getsize(rndword)[1]
     draw = ImageDraw.Draw(image)
+    
     uw = int((width-tw)/2)
     uh = int((height-th)/2)
+    
     draw.text((uw, 10), rndword, font=font)
+    
     return image
 
 
