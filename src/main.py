@@ -42,7 +42,7 @@ def AddText(image):
     return image
 
 try:
-    maxnum = int(input("How Many?: "))
+    maxnum = int(input("How Many?(Default 10): "))
 except:
     pass
 
