@@ -2,8 +2,7 @@ from PIL import Image , ImageEnhance , ImageFont , ImageDraw
 import random
 import os
 
-numfile = open("num.txt","r+")
-num = int(numfile.read())
+num = 0
 maxnum = 10
 
 def DeepFry(image):
@@ -50,8 +49,3 @@ for i in range(maxnum):
     randomimg = randomfile
     num += 1
     AddText(DeepFry(Image.open(os.path.join("imageLibrary", randomimg)))).save("finalimage"+str(num)+".png")
-
-numfile.seek(0)
-numfile.write(str(num))
-numfile.truncate()
-numfile.close()
