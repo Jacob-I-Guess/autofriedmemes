@@ -41,8 +41,10 @@ def AddText(image):
     
     return image
 
-
-maxnum = int(input("How Many?: "))
+try:
+    maxnum = int(input("How Many?: "))
+except:
+    pass
 
 for i in range(maxnum):
     randomfile = random.choice(os.listdir("imageLibrary"))
