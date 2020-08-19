@@ -8,7 +8,7 @@ maxnum = 10
 def DeepFry(image):
     size = image.size
     sharp = ImageEnhance.Sharpness (image.convert('RGB'))
-    image = sharp.enhance(5.0)
+    image = sharp.enhance(10.0)
     colour = ImageEnhance.Color (image)
     image = colour.enhance(5.0)
     
